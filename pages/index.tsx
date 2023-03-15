@@ -6,6 +6,7 @@ import Modal from "@/components/Modal/Modal";
 import skills from "@/utils/skills";
 import works from "@/utils/works";
 import MoreInfo from "@/components/MoreInfo/MoreInfo";
+import ContactForm from "@/components/ContactForm/ContactForm";
 import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -131,12 +132,13 @@ export default function Home() {
         >
           CONTACT ME
         </h1>
+        <ContactForm />
       </div>
     </>
   );
 }
 
-//todo:dl resume btn in abt me, link to linkedin, github, contact frm, resume btn in contact me,icon, footer, highlight color, scrollbar, blobs, parallax,header mobile v tablet v desktop
+//todo:dl resume btn in abt me, link to linkedin, github, contact frm, resume btn in contact me,icon, footer, highlight color, scrollbar, blobs, parallax,header mobile v tablet v desktop, icons for linkedin, github, location, person, desktop site,skills
 //#e0e2eb
 //#dddfeb
 //#bca49c
