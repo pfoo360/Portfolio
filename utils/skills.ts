@@ -49,22 +49,13 @@ const skills = [
     info: "NextJS",
   },
   {
-    image: git,
-    info: "Git",
-  },
-  {
     image: nodejs,
     info: "NodeJS",
   },
   {
-    image: express,
-    info: "ExpressJS",
+    image: python,
+    info: "Python",
   },
-  {
-    image: redux,
-    info: "Redux",
-  },
-
   {
     image: graphql,
     info: "GraphQL",
@@ -81,15 +72,9 @@ const skills = [
     image: postgresql,
     info: "PostgreSQL",
   },
-
   {
     image: firebase,
     info: "Firebase",
-  },
-
-  {
-    image: python,
-    info: "Python",
   },
   {
     image: jwt,

@@ -31,6 +31,7 @@ import trpc from "@/public/skills/trpc.svg";
 import typescript from "@/public/skills/typescript.svg";
 import vercel from "@/public/skills/vercel.svg";
 import { objectFit } from "@/types/types";
+import getBaseUrl from "@/utils/getBaseUrl";
 
 const works = [
   {
@@ -39,6 +40,7 @@ const works = [
       src: "/../public/campfire/5.png",
       height: 160,
       width: 340,
+      objectFit: "contain" as objectFit,
     },
     description:
       "Campfire is a blogging application. Anyone can read, and search for, user-generated content. Those that register are able to create, update, and delete their own stories. Additionally, users are allowed to submit an image to go along with their story. JWTs, in the form of access tokens and HTTP-only refresh tokens, are used to verify permissions and create persistent logins.</br>The frontend is built with ReactJS and styled with CSS modules. Custom hooks allows for infinite scroll pagination.</br>The REST api is built with NodeJS and ExpressJS. A custom ORM model is built to perform queries on a MySQL database.",
@@ -114,6 +116,7 @@ const works = [
       src: "/../public/filebase/6.png",
       height: 160,
       width: 340,
+      objectFit: "contain" as objectFit,
     },
     description:
       "Filebase is a file-hosting application that was born from my dissatisfaction of using local image storage for my previous project, Campfire. Filebase allows users to create directories and upload/download their files to/from the cloud. NextAuth, OAuth and session-based security are used to verify permissions and persist logins.</br>Filebase is built with Typescript, NextJS, and hosted on Vercel.</br>The frontend is built with ReactJS and styled with TailwindCSS. The backend uses Prisma to query a PostgreSQL database hosted on Railway. Firebase's client-side and admin packages are used for file storage and retrieval.",
@@ -197,6 +200,7 @@ const works = [
       src: "/../public/nepenthes/18.png",
       height: 160,
       width: 340,
+      objectFit: "contain" as objectFit,
     },
     description:
       "Nepenthes is a app designed to help organize the development of software- commonly known as a bug-tracker. Role-based permissions (ADMIN, MANAGER, DEVELOPER) provides security as it restricts what users can see/do. The app allows users to: create tickets, provide additional comments on tickets, and update the status of tickets throughout the development lifecycle.</br> The system is built with Typescript and NextJS and hosted on Vercel. The frontend is built with ReactJS and TailwindCSS. Prisma's CLI and ORM are used to develop and query a postgreSQL database hosted on Railway. The backend is a GraphQL api built with the Apollo stack.",

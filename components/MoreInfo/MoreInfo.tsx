@@ -43,14 +43,14 @@ const MoreInfo: FC<MoreInfoProps> = ({ value }) => {
   };
   return (
     <>
-      <div className="absolute w-full h-full group hover:backdrop-filter hover:bg-white hover:bg-opacity-10 hover:backdrop-blur-sm hover:border hover:border-white hover:border-opacity-50 flex flex-col justify-center items-center">
+      <div className="absolute w-full h-full group hover:backdrop-filter hover:backdrop-blur-sm flex flex-col justify-center items-center">
         <h1
-          className={`hidden group-hover:flex font-roboto text-[32px] leading-[48px] font-bold my-4 text-[#d3c3c0] uppercase`}
+          className={`hidden group-hover:flex font-roboto text-[2rem] leading-[3rem] font-bold my-4 text-primary-sand uppercase`}
         >
           {value.name}
         </h1>
         <div
-          className="hidden group-hover:flex text-[#878291] hover:text-[#948f9f] hover:cursor-pointer group-hover:underline group-hover:decoration-dotted group-hover:underline-offset-2 font-mono text-sm font-normal"
+          className="hidden group-hover:flex text-secondary-purple hover:text-[#948f9f] hover:cursor-pointer group-hover:underline group-hover:decoration-dotted group-hover:underline-offset-2 font-roboto-mono text-sm"
           onClick={handleOpen}
         >
           LEARN MORE
@@ -109,3 +109,5 @@ const MoreInfo: FC<MoreInfoProps> = ({ value }) => {
 };
 
 export default MoreInfo;
+
+// hover:border hover:border-white hover:border-opacity-50

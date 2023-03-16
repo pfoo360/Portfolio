@@ -1,19 +1,59 @@
 import { FC, useState, useEffect, ChangeEvent, MouseEvent } from "react";
+import schema from "@/schema/";
+import trpc from "@/utils/trpc";
 
 interface ContactFormProps {}
 
 const ContactForm: FC<ContactFormProps> = () => {
+  const { isLoading: isSubmitting, mutate } = trpc.email.send.useMutation({
+    onError: (error) => {
+      //error popup
+    },
+    onSuccess: (data) => {
+      //clear form
+      //success popup
+    },
+  });
+
   const [name, setName] = useState("");
   const [nameBlur, setNameBlur] = useState(false);
+  const [nameError, setNameError] = useState(false);
 
   const [email, setEmail] = useState("");
   const [emailBlur, setEmailBlur] = useState(false);
+  const [emailError, setEmailError] = useState(false);
 
   const [subject, setSubject] = useState("");
   const [subjectBlur, setSubjectBlur] = useState(false);
+  const [subjectError, setSubjectError] = useState(false);
 
   const [message, setMessage] = useState("");
   const [messageBlur, setMessageBlur] = useState(false);
+  const [messageError, setMessageError] = useState(false);
+
+  useEffect(() => {
+    setNameError(false);
+    const r = schema.name.safeParse(name);
+    if (!r.success) setNameError(true);
+  }, [name]);
+
+  useEffect(() => {
+    setEmailError(false);
+    const r = schema.email.safeParse(email);
+    if (!r.success) setEmailError(true);
+  }, [email]);
+
+  useEffect(() => {
+    setSubjectError(false);
+    const r = schema.subject.safeParse(subject);
+    if (!r.success) setSubjectError(true);
+  }, [subject]);
+
+  useEffect(() => {
+    setMessageError(false);
+    const r = schema.message.safeParse(message);
+    if (!r.success) setMessageError(true);
+  }, [message]);
 
   const handleNameInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);
@@ -47,6 +87,7 @@ const ContactForm: FC<ContactFormProps> = () => {
 
   const handleSubmit = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
+    mutate({ name, email, subject, message });
   };
 
   return (
@@ -58,9 +99,12 @@ const ContactForm: FC<ContactFormProps> = () => {
         value={name}
         onChange={handleNameInputChange}
         onBlur={handleNameInputBlur}
+        disabled={isSubmitting}
         required
         placeholder="name"
-        className="text-[20px] leading-[30px] bg-transparent focus:outline-none border border-t-0 border-l-0 border-r-0 border-white text-white w-11/12 p-1 placeholder:text-white placeholder:text-opacity-70"
+        className={`text-[20px] leading-[30px] bg-transparent focus:outline-none border border-t-0 border-l-0 border-r-0 text-white w-11/12 p-1 placeholder:text-white ${
+          nameBlur && nameError ? "border-rose-400" : "border-white"
+        } disabled:border-opacity-50 disabled:text-opacity-50`}
       />
       <input
         type="email"
@@ -69,9 +113,12 @@ const ContactForm: FC<ContactFormProps> = () => {
         value={email}
         onChange={handleEmailInputChange}
         onBlur={handleEmailInputBlur}
+        disabled={isSubmitting}
         required
         placeholder="email"
-        className="text-[20px] leading-[30px] bg-transparent focus:outline-none border border-t-0 border-l-0 border-r-0 border-white text-white w-11/12 p-1 placeholder:text-white placeholder:text-opacity-70"
+        className={`text-[20px] leading-[30px] bg-transparent focus:outline-none border border-t-0 border-l-0 border-r-0 text-white w-11/12 p-1 placeholder:text-white  ${
+          emailBlur && emailError ? "border-rose-400" : "border-white"
+        } disabled:border-opacity-50 disabled:text-opacity-50`}
       />
       <input
         type="text"
@@ -80,9 +127,12 @@ const ContactForm: FC<ContactFormProps> = () => {
         value={subject}
         onChange={handleSubjectInputChange}
         onBlur={handleSubjectInputBlur}
+        disabled={isSubmitting}
         required
         placeholder="subject"
-        className="text-[20px] leading-[30px] bg-transparent focus:outline-none border border-white border-t-0 border-l-0 border-r-0 text-white w-11/12 p-1 placeholder:text-white placeholder:text-opacity-70"
+        className={`text-[20px] leading-[30px] bg-transparent focus:outline-none border border-t-0 border-l-0 border-r-0 text-white w-11/12 p-1 placeholder:text-white ${
+          subjectBlur && subjectError ? "border-rose-400" : "border-white"
+        } disabled:border-opacity-50 disabled:text-opacity-50`}
       />
       <textarea
         id="message"
@@ -90,17 +140,31 @@ const ContactForm: FC<ContactFormProps> = () => {
         value={message}
         onChange={handleMessageTextareaChange}
         onBlur={handleMessageTextareaBlur}
+        disabled={isSubmitting}
         required
         placeholder="message"
         maxLength={500}
-        className="text-[20px] leading-[30px] resize-none bg-transparent focus:outline-none border border-white border-t-0 border-l-0 border-r-0 text-white w-11/12 h-56 p-1 placeholder:text-white placeholder:text-opacity-70"
+        className={`text-[20px] leading-[30px] resize-none bg-transparent focus:outline-none border border-t-0 border-l-0 border-r-0 text-white w-11/12 h-56 p-1 placeholder:text-white ${
+          messageBlur && messageError ? "border-rose-400" : "border-white"
+        } disabled:border-opacity-50 disabled:text-opacity-50`}
       />
       <button
         type="submit"
         onClick={handleSubmit}
-        className="tracking-wide text-white text-2xl px-6 py-3 bg-white bg-opacity-50 border border-white border-opacity-90 rounded-l-full rounded-r-full focus:outline-none hover:bg-opacity-70"
+        disabled={
+          nameError ||
+          emailError ||
+          subjectError ||
+          messageError ||
+          isSubmitting
+        }
+        className={`tracking-wide text-white text-2xl px-6 py-3 hover:bg-white hover:bg-opacity-80 hover:rounded-l-full hover:rounded-r-full focus:outline-none disabled:bg-opacity-50 disabled:text-opacity-50 disabled:hover:bg-opacity-0 ${
+          isSubmitting
+            ? "bg-white rounded-l-full rounded-r-full disabled:hover:bg-opacity-50"
+            : null
+        }`}
       >
-        SEND
+        {isSubmitting ? "SUBMITTING..." : "SEND"}
       </button>
     </form>
   );

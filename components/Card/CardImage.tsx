@@ -9,7 +9,6 @@ interface CardImageProps {
 
 const CardImage: FC<CardImageProps> = ({ className }) => {
   const { image } = useCardContext();
-  console.log(typeof image);
 
   if (typeof image === "function" && !className) return <Svg image={image} />;
   if (typeof image === "function" && className)
