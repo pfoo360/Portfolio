@@ -3,8 +3,11 @@ import Modal from "@/components/Modal/Modal";
 import Svg from "@/components/Svg/Svg";
 import ExitIcon from "@/components/ExitIcon/ExitIcon";
 import ImageSlider from "@/components/ImageSlider/ImageSlider";
+import GitHubLink from "@/components/GitHubLink/GitHubLink";
+import MiscLink from "@/components/MiscLink/MiscLink";
 import Link from "next/link";
 import { objectFit } from "@/types/types";
+import { HiOutlineDesktopComputer } from "react-icons/hi";
 
 interface MoreInfoProps {
   value: {
@@ -47,7 +50,7 @@ const MoreInfo: FC<MoreInfoProps> = ({ value }) => {
           {value.name}
         </h1>
         <div
-          className="hidden group-hover:flex text-[#878291] hover:text-[#948f9f] hover:cursor-pointer group-hover:underline group-hover:decoration-dotted group-hover:underline-offset-4 font-mono text-sm font-normal"
+          className="hidden group-hover:flex text-[#878291] hover:text-[#948f9f] hover:cursor-pointer group-hover:underline group-hover:decoration-dotted group-hover:underline-offset-2 font-mono text-sm font-normal"
           onClick={handleOpen}
         >
           LEARN MORE
@@ -77,8 +80,9 @@ const MoreInfo: FC<MoreInfoProps> = ({ value }) => {
               Technologies
             </h1>
             <div className="w-full flex flex-row h-auto flex-wrap gap-x-2 gap-y-2">
-              {value.technologies.map((technology) => (
+              {value.technologies.map((technology, index) => (
                 <Svg
+                  key={index}
                   image={technology.image}
                   className="fill-current w-8 h-8"
                 />
@@ -87,21 +91,15 @@ const MoreInfo: FC<MoreInfoProps> = ({ value }) => {
             <div className="h-[2px] bg-[#120f0f] mt-3 opacity-30"></div>
             <div className="flex flex-row justify-between items-center w-full mt-1">
               {value.links.demo ? (
-                <Link
-                  href={value.links.demo}
-                  className="bg-[#b4acc1] hover:bg-[#878291] py-[10px] px-[12px] rounded-l-full rounded-r-full text-gray-50 font-roboto text-sm"
-                  target="_blank"
-                >
-                  VIEW SITE
-                </Link>
+                <MiscLink
+                  icon={
+                    <HiOutlineDesktopComputer className="w-[21px] h-[21px]" />
+                  }
+                  link={value.links.demo}
+                  text="VIEW SITE"
+                />
               ) : null}
-              <Link
-                href={value.links.github}
-                className="bg-[#d3c3c0] hover:bg-[#c7b4b0] py-[10px] px-[12px] rounded-l-full rounded-r-full text-gray-50 font-roboto text-sm"
-                target="_blank"
-              >
-                VIEW SOURCE CODE
-              </Link>
+              <GitHubLink link={value.links.github} text="VIEW SOURCE CODE" />
             </div>
           </div>
         </>

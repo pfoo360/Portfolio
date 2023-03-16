@@ -8,6 +8,15 @@ import works from "@/utils/works";
 import MoreInfo from "@/components/MoreInfo/MoreInfo";
 import ContactForm from "@/components/ContactForm/ContactForm";
 import Link from "next/link";
+import GitHubLink from "@/components/GitHubLink/GitHubLink";
+import MiscLink from "@/components/MiscLink/MiscLink";
+import { AiFillLinkedin } from "react-icons/ai";
+import {
+  IoPersonSharp,
+  IoLocationSharp,
+  IoMailSharp,
+  IoCodeSlashSharp,
+} from "react-icons/io5";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -55,27 +64,45 @@ export default function Home() {
         <p className="font-serif font-normal text-lg leading-[22px] text-justify pl-4">{`MY NAME IS PHILLIP F.`}</p>
         <p className="font-serif font-normal text-[20px] leading-[28px] text-justify pl-4 pr-2">
           I AM A SOFTWARE ENGINEER BASED IN NEW YORK CITY. I GRADUATED FROM
-          HUNTER COLLEGE WITH A BACHELOR'S DEGREE IN COMPUTER SCIENCE. FROM AN
-          EARLY AGE I HAVE HAD AN INTEREST FOR ALL THINGS TECH, WHICH HAS
+          HUNTER COLLEGE WITH A BACHELOR&apos;S DEGREE IN COMPUTER SCIENCE. FROM
+          AN EARLY AGE I HAVE HAD AN INTEREST FOR ALL THINGS TECH, WHICH HAS
           NATURALLY GUIDED ME INTO THE WORLD OF PROGRAMMING.
         </p>
         <p className="font-serif font-normal  text-[18px] leading-[25px] opacity-50 pl-4 pr-2 text-justify">
           WHEN I AM NOT CODING, I AM EXPLORING MY OTHER PASSIONS, SUCH AS
           DIGITAL DESIGN & ARTIFICAL INTELLIGENCE.
         </p>
-        <div className="grid grid-cols-2 pl-4">
-          <p className="text-white font-mono font-normal tracking-wide px-1">
-            PHILLIP FOO
-          </p>
-          <p className="text-white font-mono font-normal tracking-wide px-1">
-            NEW YORK
-          </p>
-          <p className="text-white font-mono font-normal tracking-wide px-1">
-            <Link href="#contactMe">CONTACT ME</Link>
-          </p>
-          <p className="text-white font-mono font-normal tracking-wide px-1">
-            <Link href="#myWork">MY PROJECTS</Link>
-          </p>
+        <div className="mt-5 grid grid-cols-2 pl-4 gap-y-2">
+          <div className="flex flex-row items-center justify-start">
+            <p className="text-gray-50 font-mono font-normal tracking-wide  flex flex-row justify-start gap-2">
+              <IoPersonSharp className="h-6 w-6" />
+              PHILLIP FOO
+            </p>
+          </div>
+          <div className="flex flex-row items-center justify-start">
+            <p className="text-gray-50 font-mono font-normal tracking-wide flex flex-row justify-start gap-2">
+              <IoLocationSharp className="h-6 w-6" />
+              NEW YORK
+            </p>
+          </div>
+          <div className="flex flex-row items-center justify-start">
+            <Link
+              href="#myWork"
+              className="text-gray-50 font-mono font-normal tracking-wide flex flex-row justify-start gap-2 hover:cursor-pointer hover:underline hover:decoration-dotted"
+            >
+              <IoCodeSlashSharp className="h-6 w-6" />
+              MY PROJECTS
+            </Link>
+          </div>
+          <div className="flex flex-row items-center justify-start">
+            <Link
+              href="#contactMe"
+              className="text-gray-50 font-mono font-normal tracking-wide flex flex-row justify-start gap-2 hover:cursor-pointer hover:underline hover:decoration-dotted"
+            >
+              <IoMailSharp className="h-6 w-6" />
+              CONTACT ME
+            </Link>
+          </div>
         </div>
       </div>
       <div className="bg-[#120f0f] h-screen w-screen p-5">
@@ -128,17 +155,30 @@ export default function Home() {
       <div className="bg-[#120f0f] h-auto w-screen p-5">
         <h1
           id="contactMe"
-          className="text-[80px] leading-none text-[#b4acc1] font-bold font-roboto pt-16"
+          className="text-7xl leading-none text-[#b4acc1] font-bold font-roboto pt-16"
         >
           CONTACT ME
         </h1>
+        <div className="flex flex-row justify-between items-center my-5">
+          <GitHubLink
+            link="https://github.com/pfoo360"
+            text="GITHUB"
+            className="w-5/12"
+          />
+          <MiscLink
+            link="https://www.linkedin.com/in/phillip-foo-61a836227/"
+            text="LINKEDIN"
+            icon={<AiFillLinkedin className="w-[21px] h-[21px]" />}
+            className="w-5/12"
+          />
+        </div>
         <ContactForm />
       </div>
     </>
   );
 }
 
-//todo:dl resume btn in abt me, link to linkedin, github, contact frm, resume btn in contact me,icon, footer, highlight color, scrollbar, blobs, parallax,header mobile v tablet v desktop, icons for linkedin, github, location, person, desktop site,skills
+//todo:dl resume btn in abt me, contact frm, resume btn in contact me,icon, footer, highlight color, scrollbar, blobs, parallax,header mobile v tablet v desktop,skills
 //#e0e2eb
 //#dddfeb
 //#bca49c
@@ -149,3 +189,5 @@ export default function Home() {
 //#723ace
 //#b4acc1
 //#d3c3c0
+
+//https://www.linkedin.com/in/phillip-foo-61a836227/

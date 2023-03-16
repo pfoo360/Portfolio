@@ -50,7 +50,7 @@ const ContactForm: FC<ContactFormProps> = () => {
   };
 
   return (
-    <form className="flex flex-col items-center p-5 my-5 border border-white border-opacity-60 gap-8 w-full h-5/6 bg-white bg-opacity-50 backdrop-filter backdrop-blur-sm">
+    <form className="flex flex-col items-center p-5 mb-5 border border-white border-opacity-60 gap-8 w-full h-5/6 bg-white bg-opacity-50 backdrop-filter backdrop-blur-sm">
       <input
         type="text"
         id="name"
@@ -60,7 +60,7 @@ const ContactForm: FC<ContactFormProps> = () => {
         onBlur={handleNameInputBlur}
         required
         placeholder="name"
-        className="font-roboto text-[20px] leading-[30px] bg-transparent focus:outline-none border border-t-0 border-l-0 border-r-0 border-white text-white w-11/12 p-1 placeholder:text-white placeholder:text-opacity-70"
+        className="text-[20px] leading-[30px] bg-transparent focus:outline-none border border-t-0 border-l-0 border-r-0 border-white text-white w-11/12 p-1 placeholder:text-white placeholder:text-opacity-70"
       />
       <input
         type="email"
@@ -71,7 +71,7 @@ const ContactForm: FC<ContactFormProps> = () => {
         onBlur={handleEmailInputBlur}
         required
         placeholder="email"
-        className="font-roboto text-[20px] leading-[30px] bg-transparent focus:outline-none border border-t-0 border-l-0 border-r-0 border-white text-white w-11/12 p-1 placeholder:text-white placeholder:text-opacity-70"
+        className="text-[20px] leading-[30px] bg-transparent focus:outline-none border border-t-0 border-l-0 border-r-0 border-white text-white w-11/12 p-1 placeholder:text-white placeholder:text-opacity-70"
       />
       <input
         type="text"
@@ -82,7 +82,7 @@ const ContactForm: FC<ContactFormProps> = () => {
         onBlur={handleSubjectInputBlur}
         required
         placeholder="subject"
-        className="font-roboto text-[20px] leading-[30px] bg-transparent focus:outline-none border border-white border-t-0 border-l-0 border-r-0 text-white w-11/12 p-1 placeholder:text-white placeholder:text-opacity-70"
+        className="text-[20px] leading-[30px] bg-transparent focus:outline-none border border-white border-t-0 border-l-0 border-r-0 text-white w-11/12 p-1 placeholder:text-white placeholder:text-opacity-70"
       />
       <textarea
         id="message"
@@ -93,12 +93,12 @@ const ContactForm: FC<ContactFormProps> = () => {
         required
         placeholder="message"
         maxLength={500}
-        className="font-roboto text-[20px] leading-[30px] resize-none bg-transparent focus:outline-none border border-white text-white w-11/12 h-60 p-1 placeholder:text-white placeholder:text-opacity-70"
+        className="text-[20px] leading-[30px] resize-none bg-transparent focus:outline-none border border-white border-t-0 border-l-0 border-r-0 text-white w-11/12 h-56 p-1 placeholder:text-white placeholder:text-opacity-70"
       />
       <button
         type="submit"
         onClick={handleSubmit}
-        className="font-roboto tracking-wide text-white text-2xl px-8 py-4 bg-white bg-opacity-50 border border-white border-opacity-90 rounded-l-full rounded-r-full focus:outline-none hover:bg-opacity-70"
+        className="tracking-wide text-white text-2xl px-6 py-3 bg-white bg-opacity-50 border border-white border-opacity-90 rounded-l-full rounded-r-full focus:outline-none hover:bg-opacity-70"
       >
         SEND
       </button>
