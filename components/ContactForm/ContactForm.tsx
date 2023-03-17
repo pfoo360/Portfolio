@@ -120,7 +120,7 @@ const ContactForm: FC<ContactFormProps> = () => {
           required
           placeholder="email"
           className={`font-playfair text-[1.5rem] leading-[2.25rem] bg-transparent focus:outline-none border border-t-0 border-l-0 border-r-0 text-white w-11/12 p-1 placeholder:text-white ${
-            nameBlur && nameError ? "border-rose-400" : "border-white"
+            emailBlur && emailError ? "border-rose-400" : "border-white"
           } disabled:border-opacity-50 disabled:text-opacity-50`}
         />
         <input
@@ -134,7 +134,7 @@ const ContactForm: FC<ContactFormProps> = () => {
           required
           placeholder="subject"
           className={`font-playfair text-[1.5rem] leading-[2.25rem] bg-transparent focus:outline-none border border-t-0 border-l-0 border-r-0 text-white w-11/12 p-1 placeholder:text-white ${
-            nameBlur && nameError ? "border-rose-400" : "border-white"
+            subjectBlur && subjectError ? "border-rose-400" : "border-white"
           } disabled:border-opacity-50 disabled:text-opacity-50`}
         />
         <textarea
