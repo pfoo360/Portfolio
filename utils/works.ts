@@ -32,12 +32,19 @@ import typescript from "@/public/skills/typescript.svg";
 import vercel from "@/public/skills/vercel.svg";
 import { objectFit } from "@/types/types";
 import getBaseUrl from "@/utils/getBaseUrl";
+import campfire1 from "@/public/campfire/1.png";
+import campfire2 from "@/public/campfire/2.png";
+import campfire3 from "@/public/campfire/3.png";
+import campfire4 from "@/public/campfire/4.png";
+import campfire5 from "@/public/campfire/5.png";
+import campfire6 from "@/public/campfire/6.png";
+import campfire7 from "@/public/campfire/7.png";
 
 const works = [
   {
     name: "Campfire",
     image: {
-      src: "/../public/campfire/5.png",
+      src: campfire5.src,
       objectFit: "contain" as objectFit,
     },
     description:
@@ -55,37 +62,37 @@ const works = [
     ],
     slides: [
       {
-        src: "/../public/campfire/5.png",
+        src: campfire5.src,
         alt: "homepage_view",
         objectFit: "contain" as objectFit,
       },
       {
-        src: "/../public/campfire/7.png",
+        src: campfire7.src,
         alt: "specific_story_view",
         objectFit: "contain" as objectFit,
       },
       {
-        src: "/../public/campfire/6.png",
+        src: campfire6.src,
         alt: "login",
         objectFit: "contain" as objectFit,
       },
       {
-        src: "/../public/campfire/2.png",
+        src: campfire2.src,
         alt: "create_story_form",
         objectFit: "contain" as objectFit,
       },
       {
-        src: "/../public/campfire/3.png",
+        src: campfire3.src,
         alt: "create_story_form_error",
         objectFit: "contain" as objectFit,
       },
       {
-        src: "/../public/campfire/4.png",
+        src: campfire4.src,
         alt: "create_story_in_submit",
         objectFit: "contain" as objectFit,
       },
       {
-        src: "/../public/campfire/1.png",
+        src: campfire1.src,
         alt: "users_page",
         objectFit: "contain" as objectFit,
       },
