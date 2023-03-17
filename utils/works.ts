@@ -31,7 +31,6 @@ import trpc from "@/public/skills/trpc.svg";
 import typescript from "@/public/skills/typescript.svg";
 import vercel from "@/public/skills/vercel.svg";
 import { objectFit } from "@/types/types";
-import getBaseUrl from "@/utils/getBaseUrl";
 import campfire1 from "@/public/campfire/1.png";
 import campfire2 from "@/public/campfire/2.png";
 import campfire3 from "@/public/campfire/3.png";
@@ -39,6 +38,28 @@ import campfire4 from "@/public/campfire/4.png";
 import campfire5 from "@/public/campfire/5.png";
 import campfire6 from "@/public/campfire/6.png";
 import campfire7 from "@/public/campfire/7.png";
+import filebase1 from "@/public/filebase/1.png";
+import filebase2 from "@/public/filebase/2.png";
+import filebase3 from "@/public/filebase/3.png";
+import filebase6 from "@/public/filebase/6.png";
+import filebase7 from "@/public/filebase/7.png";
+import filebase8 from "@/public/filebase/8.png";
+import filebase10 from "@/public/filebase/10.png";
+import filebase11 from "@/public/filebase/11.png";
+import nepenthes10 from "@/public/nepenthes/10.png";
+import nepenthes14 from "@/public/nepenthes/14.png";
+import nepenthes18 from "@/public/nepenthes/18.png";
+import nepenthes19 from "@/public/nepenthes/19.png";
+import nepenthes22 from "@/public/nepenthes/22.png";
+import nepenthes29 from "@/public/nepenthes/29.png";
+import nepenthes30 from "@/public/nepenthes/30.png";
+import chirp3 from "@/public/chirp/3.png";
+import chirp10 from "@/public/chirp/10.png";
+import chirp13 from "@/public/chirp/13.png";
+import chirp14 from "@/public/chirp/14.png";
+import chirp17 from "@/public/chirp/17.png";
+import chirp19 from "@/public/chirp/19.png";
+import chirp21 from "@/public/chirp/21.png";
 
 const works = [
   {
@@ -104,7 +125,7 @@ const works = [
   {
     name: "Filebase",
     image: {
-      src: "/../public/filebase/6.png",
+      src: filebase6.src,
       objectFit: "contain" as objectFit,
     },
     description:
@@ -122,42 +143,42 @@ const works = [
     ],
     slides: [
       {
-        src: "/../public/filebase/1.png",
+        src: filebase1.src,
         alt: "login",
         objectFit: "contain" as objectFit,
       },
       {
-        src: "/../public/filebase/2.png",
+        src: filebase2.src,
         alt: "new_user_first_time_login",
         objectFit: "contain" as objectFit,
       },
       {
-        src: "/../public/filebase/3.png",
+        src: filebase3.src,
         alt: "create_folder",
         objectFit: "contain" as objectFit,
       },
       {
-        src: "/../public/filebase/6.png",
+        src: filebase6.src,
         alt: "upload",
         objectFit: "contain" as objectFit,
       },
       {
-        src: "/../public/filebase/7.png",
+        src: filebase7.src,
         alt: "filebase_after_creating_folders_and_uploading_files",
         objectFit: "contain" as objectFit,
       },
       {
-        src: "/../public/filebase/8.png",
+        src: filebase8.src,
         alt: "delete_confirm",
         objectFit: "contain" as objectFit,
       },
       {
-        src: "/../public/filebase/10.png",
+        src: filebase10.src,
         alt: "download",
         objectFit: "contain" as objectFit,
       },
       {
-        src: "/../public/filebase/11.png",
+        src: filebase11.src,
         alt: "rename_folder",
         objectFit: "contain" as objectFit,
       },
@@ -170,7 +191,7 @@ const works = [
   {
     name: "Nepenthes",
     image: {
-      src: "/../public/nepenthes/18.png",
+      src: nepenthes18.src,
       objectFit: "contain" as objectFit,
     },
     description:
@@ -188,37 +209,37 @@ const works = [
     ],
     slides: [
       {
-        src: "/../public/nepenthes/10.png",
+        src: nepenthes10.src,
         alt: "adding_user_to_workspace",
         objectFit: "contain" as objectFit,
       },
       {
-        src: "/../public/nepenthes/14.png",
+        src: nepenthes14.src,
         alt: "create_project",
         objectFit: "contain" as objectFit,
       },
       {
-        src: "/../public/nepenthes/18.png",
+        src: nepenthes18.src,
         alt: "create_ticket",
         objectFit: "contain" as objectFit,
       },
       {
-        src: "/../public/nepenthes/19.png",
+        src: nepenthes19.src,
         alt: "project_view",
         objectFit: "contain" as objectFit,
       },
       {
-        src: "/../public/nepenthes/22.png",
+        src: nepenthes22.src,
         alt: "add_comment",
         objectFit: "contain" as objectFit,
       },
       {
-        src: "/../public/nepenthes/29.png",
+        src: nepenthes29.src,
         alt: "my_tickets_view",
         objectFit: "contain" as objectFit,
       },
       {
-        src: "/../public/nepenthes/30.png",
+        src: nepenthes30.src,
         alt: "tickets_visualized",
         objectFit: "contain" as objectFit,
       },
@@ -231,7 +252,7 @@ const works = [
   {
     name: "Chirp",
     image: {
-      src: "/../public/chirp/13.png",
+      src: chirp13.src,
       objectFit: "contain" as objectFit,
     },
     description:
@@ -248,37 +269,37 @@ const works = [
     ],
     slides: [
       {
-        src: "/../public/chirp/3.png",
+        src: chirp3.src,
         alt: "sign_in_page",
         objectFit: "contain" as objectFit,
       },
       {
-        src: "/../public/chirp/10.png",
+        src: chirp10.src,
         alt: "user_profile",
         objectFit: "contain" as objectFit,
       },
       {
-        src: "/../public/chirp/13.png",
+        src: chirp13.src,
         alt: "create_chirp",
         objectFit: "contain" as objectFit,
       },
       {
-        src: "/../public/chirp/14.png",
+        src: chirp14.src,
         alt: "delete_update_buttons",
         objectFit: "contain" as objectFit,
       },
       {
-        src: "/../public/chirp/17.png",
+        src: chirp17.src,
         alt: "edit_chirp",
         objectFit: "contain" as objectFit,
       },
       {
-        src: "/../public/chirp/19.png",
+        src: chirp19.src,
         alt: "viewing_another_users_page",
         objectFit: "contain" as objectFit,
       },
       {
-        src: "/../public/chirp/21.png",
+        src: chirp21.src,
         alt: "user_does_not_exist_view",
         objectFit: "contain" as objectFit,
       },
