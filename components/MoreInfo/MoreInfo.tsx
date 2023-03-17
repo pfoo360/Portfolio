@@ -5,7 +5,6 @@ import ExitIcon from "@/components/ExitIcon/ExitIcon";
 import ImageSlider from "@/components/ImageSlider/ImageSlider";
 import GitHubLink from "@/components/GitHubLink/GitHubLink";
 import MiscLink from "@/components/MiscLink/MiscLink";
-import Link from "next/link";
 import { objectFit } from "@/types/types";
 import { HiOutlineDesktopComputer } from "react-icons/hi";
 

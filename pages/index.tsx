@@ -2,7 +2,6 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import Card from "@/components/Card/Card";
-import Modal from "@/components/Modal/Modal";
 import skills from "@/utils/skills";
 import works from "@/utils/works";
 import MoreInfo from "@/components/MoreInfo/MoreInfo";
@@ -11,6 +10,7 @@ import Link from "next/link";
 import GitHubLink from "@/components/GitHubLink/GitHubLink";
 import MiscLink from "@/components/MiscLink/MiscLink";
 import Blobs from "@/components/Blobs/Blobs";
+import Navigation from "@/components/Navigation/Navigation";
 import { AiFillLinkedin } from "react-icons/ai";
 import {
   IoPersonSharp,
@@ -18,7 +18,6 @@ import {
   IoMailSharp,
   IoCodeSlashSharp,
 } from "react-icons/io5";
-import Navigation from "@/components/Navigation/Navigation";
 import bg from "@/public/europeana.jpg";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -197,14 +196,4 @@ export default function Home() {
   );
 }
 
-//todo:dl resume btn in abt me, contact frm, resume btn in contact me,icon,image not lading issue, parallax,header,images
-//#e0e2eb
-//#dddfeb
-//#bca49c
-//#bfb1ac
-//#c7b4b0
-//#f5eee6
-
-//#723ace
-//#b4acc1
-//#d3c3c0
+//todo:dl resume btn in abt me, contact frm, resume btn in contact me,icon, parallax
