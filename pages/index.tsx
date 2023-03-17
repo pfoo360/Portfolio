@@ -29,7 +29,7 @@ export default function Home() {
         <title>Phillip F.</title>
         <meta name="description" content="Phillip F. Portfolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" />
       </Head>
       <Navigation />
       <div className="w-full min-h-screen flex flex-row justify-center items-start">
@@ -196,4 +196,4 @@ export default function Home() {
   );
 }
 
-//todo:dl resume btn in abt me, contact frm, resume btn in contact me,icon, parallax
+//todo:dl resume btn in abt me, contact frm, resume btn in contact me, parallax
