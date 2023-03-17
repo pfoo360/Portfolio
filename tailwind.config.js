@@ -17,6 +17,7 @@ module.exports = {
         "primary-purple": "#b4acc1",
         "secondary-purple": "#878291",
         "primary-sand": "#d3c3c0",
+        "secondary-sand": "#c7b4b0",
       },
       fontFamily: {
         playfair: ["Playfair Display", "serif"],

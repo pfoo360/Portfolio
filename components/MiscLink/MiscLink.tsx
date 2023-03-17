@@ -13,7 +13,7 @@ const MiscLink: FC<MiscLinkProps> = ({ link, text, className, icon }) => {
   return (
     <Link
       href={link}
-      className={`bg-[#b4acc1] hover:bg-[#878291] py-[10px] px-[12px] rounded-l-full rounded-r-full text-gray-50 font-roboto font-bold tracking-wide text-sm flex flex-row justify-center items-center gap-[6px] ${
+      className={`bg-primary-purple hover:bg-secondary-purple h-[2.75rem] w-full md:max-w-[9rem] rounded-l-full rounded-r-full text-white font-roboto font-bold tracking-wide text-sm flex flex-row justify-center items-center gap-[.5rem] ${
         className ? className : null
       }`}
       target="_blank"

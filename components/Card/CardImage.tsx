@@ -14,24 +14,12 @@ const CardImage: FC<CardImageProps> = ({ className }) => {
   if (typeof image === "function" && className)
     return <Svg image={image} className={className} />;
 
-  if (typeof image === "object" && !className)
+  if (typeof image === "object")
     return (
       <Image
         src={image.src}
         alt={image?.alt ? image.alt : "image"}
-        width={image?.width ? image.width : "340"}
-        height={image?.height ? image.height : "340"}
-        style={{ objectFit: image?.objectFit ? image.objectFit : "cover" }}
-      />
-    );
-  if (typeof image === "object" && className)
-    return (
-      <Image
-        src={image.src}
-        alt={image?.alt ? image.alt : "image"}
-        width={image?.width ? image.width : "340"}
-        height={image?.height ? image.height : "340"}
-        className={className}
+        fill
         style={{ objectFit: image?.objectFit ? image.objectFit : "cover" }}
       />
     );

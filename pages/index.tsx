@@ -19,6 +19,7 @@ import {
   IoCodeSlashSharp,
 } from "react-icons/io5";
 import Navigation from "@/components/Navigation/Navigation";
+import bg from "@/public/europeana.jpg";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -84,14 +85,14 @@ export default function Home() {
                 NEW YORK
               </p>
               <Link
-                href="work"
+                href="#work"
                 className="text-white font-roboto-mono tracking-wide flex flex-row items-center justify-start gap-1 uppercase hover:underline hover:decoration-dotted"
               >
                 <IoCodeSlashSharp className="h-6 w-6" />
                 WORK
               </Link>
               <Link
-                href="contact"
+                href="#contact"
                 className="text-white font-roboto-mono tracking-wide flex flex-row items-center justify-start gap-1 uppercase hover:underline hover:decoration-dotted"
               >
                 <IoMailSharp className="h-6 w-6" />
@@ -142,17 +143,13 @@ export default function Home() {
             WORK
           </h1>
           <div className="w-full max-w-screen-xl flex flex-row justify-center items-start">
-            <div className="w-full grid grid-cols-1 md:grid-cols-2 md:gap-6 justify-center place-items-center place-content-center gap-3">
+            <div className="w-full grid grid-cols-1 justify-center place-items-center place-content-center gap-3">
               {works.map((work) => (
                 <Card
                   key={work.name}
                   value={work}
-                  className="relative bg-primary-purple flex flex-col justify-center items-center"
-                  image={
-                    <Card.Image
-                      className={`w-[22rem] md:w-[28rem] h-[10rem] md:h-[16rem]`}
-                    />
-                  }
+                  className="relative w-full h-[15rem] md:h-[25rem] bg-primary-purple flex flex-col justify-center items-center"
+                  image={<Card.Image />}
                   info={<MoreInfo value={work} />}
                 />
               ))}
@@ -161,47 +158,41 @@ export default function Home() {
         </div>
       </div>
 
-      {/*
-        
-        <div className="container grid grid-cols-1 gap-4 justify-center place-items-center place-content-center">
-          {works.map((work) => (
-            <Card
-              key={work.name}
-              value={work}
-              className="relative bg-[#b4acc1] flex flex-col justify-center items-center"
-              image={<Card.Image className={`w-[340px] h-[160px]`} />}
-              info={<MoreInfo value={work} />}
+      <div
+        id="contact"
+        className="w-full min-h-min flex flex-row justify-center items-start"
+      >
+        <div className="flex flex-col justify-start items-start h-full p-5 w-11/12 max-w-screen-xl">
+          <h1 className="font-roboto text-primary-purple text-[4rem] leading-[6rem] tracking-tight font-bold uppercase">
+            CONTACT
+          </h1>
+          <div className="mb-10 w-full flex flex-col gap-4 sm:flex-row">
+            <GitHubLink link="https://github.com/pfoo360" text="GITHUB" />
+            <MiscLink
+              link="https://www.linkedin.com/in/phillip-foo-61a836227/"
+              text="LINKEDIN"
+              icon={<AiFillLinkedin className="w-[1.5rem] h-[1.5rem]" />}
             />
-          ))}
+          </div>
+
+          <div className="flex flex-row justify-center w-full">
+            <div className="w-full max-w-[55rem] ">
+              <ContactForm />
+            </div>
+            <div className="hidden lg:inline-block absolute w-full max-w-[63rem] h-full max-h-[47.25rem] bottom-screen z-[-999]">
+              <Image src={`${bg.src}`} alt="test" fill className="opacity-90" />
+              <div className="absolute bottom-0 z-10 bg-gradient-to-t from-primary-black to-transparent h-[30vh] w-full" />
+              <div className="absolute z-10 -right-1 bg-gradient-to-l from-primary-black to-transparent h-full w-6/12" />
+              <div className="absolute z-10 -left-1 bg-gradient-to-r from-primary-black to-transparent h-full w-6/12" />
+            </div>
+          </div>
         </div>
       </div>
-      <div className="bg-[#120f0f] h-auto w-screen p-5">
-        <h1
-          id="contactMe"
-          className="text-7xl leading-none text-[#b4acc1] font-bold font-roboto pt-16"
-        >
-          CONTACT ME
-        </h1>
-        <div className="flex flex-row justify-between items-center my-5">
-          <GitHubLink
-            link="https://github.com/pfoo360"
-            text="GITHUB"
-            className="w-5/12"
-          />
-          <MiscLink
-            link="https://www.linkedin.com/in/phillip-foo-61a836227/"
-            text="LINKEDIN"
-            icon={<AiFillLinkedin className="w-[21px] h-[21px]" />}
-            className="w-5/12"
-          />
-        </div>
-        <ContactForm />
-      </div> */}
     </>
   );
 }
 
-//todo:dl resume btn in abt me, contact frm, resume btn in contact me,icon,image not lading issue, highlight color, scrollbar, blobs, parallax,header mobile v tablet v desktop,skills, more info
+//todo:dl resume btn in abt me, contact frm, resume btn in contact me,icon,image not lading issue, parallax,header,images
 //#e0e2eb
 //#dddfeb
 //#bca49c
@@ -212,9 +203,3 @@ export default function Home() {
 //#723ace
 //#b4acc1
 //#d3c3c0
-
-//https://www.linkedin.com/in/phillip-foo-61a836227/
-
-//   If there is a technical skill that is needed, and is not listed above,
-// I am always interested in learning new languages, frameworks, and
-// concepts!

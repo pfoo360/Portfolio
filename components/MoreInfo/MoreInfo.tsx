@@ -14,8 +14,6 @@ interface MoreInfoProps {
     name: string;
     image: {
       src: string;
-      height: number;
-      width: number;
       objectFit?: objectFit;
     };
     description: string;
@@ -23,8 +21,6 @@ interface MoreInfoProps {
     slides: Array<{
       src: string;
       alt: string;
-      width: number;
-      height: number;
       objectFit: objectFit;
     }>;
     links: { github: string; demo?: string };
@@ -58,25 +54,27 @@ const MoreInfo: FC<MoreInfoProps> = ({ value }) => {
       </div>
       <Modal isOpen={isOpen} onClose={handleClose} className="backdrop-blur-sm">
         <>
-          <div className="bg-gray-50 w-[370px] h-[800px] bg-opacity-[0.85] text-[#120f0f] p-2 font-serif font-normal text-[16px] leading-[24px] text-justify">
+          <div className="min-w-[20rem] max-h-[44rem] sm:min-w-[37.5rem] md:max-w-[55rem] md:max-h-[86rem] overflow-y-auto bg-white bg-opacity-[0.8] text-primary-black p-2 font-playfair font-normal text-[1rem] leading-[1.5rem] text-justify">
             <div className="flex flex-row items-center justify-end">
               <div className="w-auto h-auto" onClick={handleClose}>
                 <ExitIcon />
               </div>
             </div>
-            <h1 className="text-[32px] leading-[48px] text-[#b4acc1] font-roboto font-bold">
+            <h1 className="text-[2rem] leading-[3rem] text-primary-purple font-roboto font-bold">
               {value.name}
             </h1>
-            <ImageSlider
-              className="bg-[#b4acc1] w-full h-[170px] mt-2 mb-5 text-[#878291] hover:text-[#948f9f]"
-              slides={value.slides}
-            />
+            <div className="w-full h-full flex flex-row justify-center items-center mb-5">
+              <ImageSlider
+                className="bg-primary-purple w-full h-[10rem] sm:h-[18rem] md:h-[22rem] mt-2 mb-5 text-primary-sand hover:text-secondary-sand"
+                slides={value.slides}
+              />
+            </div>
             <div dangerouslySetInnerHTML={{ __html: value.description }} />
-            <p className="text-[#120f0f] font-serif font-normal text-[12px] leading-[18px] mt-[4px] text-justify opacity-50">
+            <p className="text-primary-black font-playfair font-normal text-[1rem] leading-[1.5rem] my-[.25rem] text-justify opacity-50">
               Visit the GitHub link below for more information, images and a
               detailed walkthrough!
             </p>
-            <h1 className="text-[16px] leading-none text-[#b4acc1] font-roboto font-bold mt-3 mb-2">
+            <h1 className="text-[1rem] leading-none text-primary-purple font-roboto font-bold mt-3 mb-2">
               Technologies
             </h1>
             <div className="w-full flex flex-row h-auto flex-wrap gap-x-2 gap-y-2">
@@ -88,12 +86,12 @@ const MoreInfo: FC<MoreInfoProps> = ({ value }) => {
                 />
               ))}
             </div>
-            <div className="h-[2px] bg-[#120f0f] mt-3 opacity-30"></div>
-            <div className="flex flex-row justify-between items-center w-full mt-1">
+            <div className="h-[.125rem] bg-primary-black mt-3 opacity-30 mt-4 mb-5"></div>
+            <div className="flex flex-row flex-wrap gap-2 justify-between items-center w-full mt-1 mb-5">
               {value.links.demo ? (
                 <MiscLink
                   icon={
-                    <HiOutlineDesktopComputer className="w-[21px] h-[21px]" />
+                    <HiOutlineDesktopComputer className="w-[1.5rem] h-[1.5rem]" />
                   }
                   link={value.links.demo}
                   text="VIEW SITE"

@@ -5,6 +5,7 @@ import Link from "next/link";
 const Navigation: FC = () => {
   const links = navigations.map(({ href, title }) => (
     <Link
+      key={title}
       href={href}
       className="text-white font-playfair after:content-[',_'] font-semibold hover:text-gray-100 text-lg uppercase"
     >
