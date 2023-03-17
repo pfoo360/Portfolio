@@ -54,7 +54,7 @@ const MoreInfo: FC<MoreInfoProps> = ({ value }) => {
       </div>
       <Modal isOpen={isOpen} onClose={handleClose} className="backdrop-blur-sm">
         <>
-          <div className="min-w-[20rem] max-h-[44rem] sm:min-w-[37.5rem] md:max-w-[55rem] md:max-h-[35rem] overflow-y-auto bg-white bg-opacity-[0.8] text-primary-black p-2 font-playfair font-normal text-[1rem] leading-[1.5rem] text-justify">
+          <div className="min-w-[20rem] max-h-[35rem] sm:min-w-[37.5rem] md:max-w-[55rem] overflow-y-auto bg-white bg-opacity-[0.8] text-primary-black p-2 font-playfair font-normal text-[1rem] leading-[1.5rem] text-justify">
             <div className="flex flex-row items-center justify-end">
               <div className="w-auto h-auto" onClick={handleClose}>
                 <ExitIcon />
