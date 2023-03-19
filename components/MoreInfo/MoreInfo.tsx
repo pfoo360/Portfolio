@@ -89,7 +89,7 @@ const MoreInfo: FC<MoreInfoProps> = ({ value }) => {
                 />
               ))}
             </div>
-            <div className="h-[.125rem] bg-primary-black mt-3 opacity-30 mt-4 mb-5"></div>
+            <div className="h-[.125rem] bg-primary-black opacity-30 mt-4 mb-5"></div>
             <div className="flex flex-row flex-wrap gap-2 justify-between items-center w-full mt-1 mb-5">
               {value.links.demo ? (
                 <MiscLink
