@@ -20,6 +20,8 @@ import {
 } from "react-icons/io5";
 import bg from "@/public/europeana.jpg";
 
+//TODO: resume dl btn in about me section and contact section
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -196,5 +198,3 @@ export default function Home() {
     </>
   );
 }
-
-//todo:dl resume btn in abt me, contact frm, resume btn in contact me, parallax

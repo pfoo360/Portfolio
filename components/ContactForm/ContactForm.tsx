@@ -1,19 +1,31 @@
 import { FC, useState, useEffect, ChangeEvent, MouseEvent } from "react";
 import schema from "@/schema/";
 import trpc from "@/utils/trpc";
-import bg from "@/public/europeana.jpg";
-import Image from "next/image";
 
 interface ContactFormProps {}
 
 const ContactForm: FC<ContactFormProps> = () => {
   const { isLoading: isSubmitting, mutate } = trpc.email.send.useMutation({
     onError: (error) => {
-      //error popup
+      console.log(error.message);
+      alert(`Unable to send email. ❌❌\n${error.message} `);
     },
     onSuccess: (data) => {
-      //clear form
-      //success popup
+      if (data.success === true) {
+        setName("");
+        setNameBlur(false);
+        setNameError(false);
+        setEmail("");
+        setEmailBlur(false);
+        setEmailError(false);
+        setSubject("");
+        setSubjectBlur(false);
+        setSubjectError(false);
+        setMessage("");
+        setMessageBlur(false);
+        setMessageError(false);
+        alert("Email successfully sent! ✔️📬");
+      }
     },
   });
 
