@@ -256,7 +256,7 @@ const works = [
       objectFit: "contain" as objectFit,
     },
     description:
-      "Chirp is a rudimentary Twitter clone. People are able to view user's 'chirps.' Registered users can perform CRUD operations on their own 'chirps.' This app was primarily an excuse to try out tRPC and Zod, two packages growing in popularity for their ability to build typesafe client-server apis. A session-based system is used to restrict/grant user permissions.</br> Chirp is built with Typescript and NextJS and hosted on Vercel. The frontend is built with ReactJS and TailwindCSS. The backend is built with tRPC and Zod for their typesafty. Prisma's CLI and ORM are used to develop and query a postgreSQL database hosted on Railway.",
+      "Chirp is a rudimentary Twitter clone. People are able to view user's 'chirps.' Registered users can perform CRUD operations on their own 'chirps.' This app was primarily an excuse to try out tRPC and Zod, two packages growing in popularity for their ability to build typesafe client-server apis. A session-based system is used to restrict/grant user permissions.</br> Chirp is built with Typescript and NextJS and hosted on Vercel. The frontend is built with ReactJS and TailwindCSS. The backend is built with tRPC and Zod for their typesafety. Prisma's CLI and ORM are used to develop and query a postgreSQL database hosted on Railway.",
     technologies: [
       { image: nextjs },
       { image: typescript },
