@@ -63,63 +63,64 @@ import chirp21 from "@/public/chirp/21.png";
 
 const works = [
   {
-    name: "Campfire",
+    name: "Nepenthes",
     image: {
-      src: campfire5.src,
+      src: nepenthes18.src,
       objectFit: "contain" as objectFit,
     },
     description:
-      "Campfire is a blogging application. Anyone can read, and search for, user-generated content. Those that register are able to create, update, and delete their own stories. Additionally, users are allowed to submit an image to go along with their story. JWTs, in the form of access tokens and HTTP-only refresh tokens, are used to verify permissions and create persistent logins.</br>The frontend is built with ReactJS and styled with CSS modules. Custom hooks allows for infinite scroll pagination.</br>The REST api is built with NodeJS and ExpressJS. A custom ORM model is built to perform queries on a MySQL database.",
+      "Nepenthes is an app designed to help organize the development of software- commonly known as a bug-tracker. Role-based permissions (ADMIN, MANAGER, DEVELOPER) provides security as it restricts what users can see/do. The app allows users to: create tickets, provide additional comments on tickets, and update the status of tickets throughout the development lifecycle.</br> The system is built with Typescript and NextJS and hosted on Vercel. The frontend is built with ReactJS and TailwindCSS. Prisma's CLI and ORM are used to develop and query a postgreSQL database hosted on Railway. The backend is a GraphQL api built with the Apollo stack.",
     technologies: [
-      { image: createReactApp },
-      { image: javascript },
+      { image: nextjs },
+      { image: typescript },
+      { image: vercel },
       { image: reactjs },
-      { image: reactRouter },
-      { image: css },
-      { image: nodejs },
-      { image: express },
-      { image: mysql },
-      { image: jwt },
+      { image: tailwind },
+      { image: graphql },
+      { image: apolloStack },
+      { image: prisma },
+      { image: postgresql },
     ],
     slides: [
       {
-        src: campfire5.src,
-        alt: "homepage_view",
+        src: nepenthes10.src,
+        alt: "adding_user_to_workspace",
         objectFit: "contain" as objectFit,
       },
       {
-        src: campfire7.src,
-        alt: "specific_story_view",
+        src: nepenthes14.src,
+        alt: "create_project",
         objectFit: "contain" as objectFit,
       },
       {
-        src: campfire6.src,
-        alt: "login",
+        src: nepenthes18.src,
+        alt: "create_ticket",
         objectFit: "contain" as objectFit,
       },
       {
-        src: campfire2.src,
-        alt: "create_story_form",
+        src: nepenthes19.src,
+        alt: "project_view",
         objectFit: "contain" as objectFit,
       },
       {
-        src: campfire3.src,
-        alt: "create_story_form_error",
+        src: nepenthes22.src,
+        alt: "add_comment",
         objectFit: "contain" as objectFit,
       },
       {
-        src: campfire4.src,
-        alt: "create_story_in_submit",
+        src: nepenthes29.src,
+        alt: "my_tickets_view",
         objectFit: "contain" as objectFit,
       },
       {
-        src: campfire1.src,
-        alt: "users_page",
+        src: nepenthes30.src,
+        alt: "tickets_visualized",
         objectFit: "contain" as objectFit,
       },
     ],
     links: {
-      github: "https://github.com/pfoo360/Campfire",
+      github: "https://github.com/pfoo360/Nepenthes",
+      demo: "https://nepenthes.vercel.app/",
     },
   },
   {
@@ -189,67 +190,6 @@ const works = [
     },
   },
   {
-    name: "Nepenthes",
-    image: {
-      src: nepenthes18.src,
-      objectFit: "contain" as objectFit,
-    },
-    description:
-      "Nepenthes is an app designed to help organize the development of software- commonly known as a bug-tracker. Role-based permissions (ADMIN, MANAGER, DEVELOPER) provides security as it restricts what users can see/do. The app allows users to: create tickets, provide additional comments on tickets, and update the status of tickets throughout the development lifecycle.</br> The system is built with Typescript and NextJS and hosted on Vercel. The frontend is built with ReactJS and TailwindCSS. Prisma's CLI and ORM are used to develop and query a postgreSQL database hosted on Railway. The backend is a GraphQL api built with the Apollo stack.",
-    technologies: [
-      { image: nextjs },
-      { image: typescript },
-      { image: vercel },
-      { image: reactjs },
-      { image: tailwind },
-      { image: graphql },
-      { image: apolloStack },
-      { image: prisma },
-      { image: postgresql },
-    ],
-    slides: [
-      {
-        src: nepenthes10.src,
-        alt: "adding_user_to_workspace",
-        objectFit: "contain" as objectFit,
-      },
-      {
-        src: nepenthes14.src,
-        alt: "create_project",
-        objectFit: "contain" as objectFit,
-      },
-      {
-        src: nepenthes18.src,
-        alt: "create_ticket",
-        objectFit: "contain" as objectFit,
-      },
-      {
-        src: nepenthes19.src,
-        alt: "project_view",
-        objectFit: "contain" as objectFit,
-      },
-      {
-        src: nepenthes22.src,
-        alt: "add_comment",
-        objectFit: "contain" as objectFit,
-      },
-      {
-        src: nepenthes29.src,
-        alt: "my_tickets_view",
-        objectFit: "contain" as objectFit,
-      },
-      {
-        src: nepenthes30.src,
-        alt: "tickets_visualized",
-        objectFit: "contain" as objectFit,
-      },
-    ],
-    links: {
-      github: "https://github.com/pfoo360/Nepenthes",
-      demo: "https://nepenthes.vercel.app/",
-    },
-  },
-  {
     name: "Chirp",
     image: {
       src: chirp13.src,
@@ -307,6 +247,66 @@ const works = [
     links: {
       github: "https://github.com/pfoo360/Chirp",
       demo: "https://chirp-seven.vercel.app/",
+    },
+  },
+  {
+    name: "Campfire",
+    image: {
+      src: campfire5.src,
+      objectFit: "contain" as objectFit,
+    },
+    description:
+      "Campfire is a blogging application. Anyone can read, and search for, user-generated content. Those that register are able to create, update, and delete their own stories. Additionally, users are allowed to submit an image to go along with their story. JWTs, in the form of access tokens and HTTP-only refresh tokens, are used to verify permissions and create persistent logins.</br>The frontend is built with ReactJS and styled with CSS modules. Custom hooks allows for infinite scroll pagination.</br>The REST api is built with NodeJS and ExpressJS. A custom ORM model is built to perform queries on a MySQL database.",
+    technologies: [
+      { image: createReactApp },
+      { image: javascript },
+      { image: reactjs },
+      { image: reactRouter },
+      { image: css },
+      { image: nodejs },
+      { image: express },
+      { image: mysql },
+      { image: jwt },
+    ],
+    slides: [
+      {
+        src: campfire5.src,
+        alt: "homepage_view",
+        objectFit: "contain" as objectFit,
+      },
+      {
+        src: campfire7.src,
+        alt: "specific_story_view",
+        objectFit: "contain" as objectFit,
+      },
+      {
+        src: campfire6.src,
+        alt: "login",
+        objectFit: "contain" as objectFit,
+      },
+      {
+        src: campfire2.src,
+        alt: "create_story_form",
+        objectFit: "contain" as objectFit,
+      },
+      {
+        src: campfire3.src,
+        alt: "create_story_form_error",
+        objectFit: "contain" as objectFit,
+      },
+      {
+        src: campfire4.src,
+        alt: "create_story_in_submit",
+        objectFit: "contain" as objectFit,
+      },
+      {
+        src: campfire1.src,
+        alt: "users_page",
+        objectFit: "contain" as objectFit,
+      },
+    ],
+    links: {
+      github: "https://github.com/pfoo360/Campfire",
     },
   },
 ];
