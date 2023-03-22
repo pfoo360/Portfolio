@@ -73,7 +73,7 @@ export default function Home() {
           </p>
           <p className="font-playfair text-white text-[1.1rem] leading-[1.6rem] text-justify uppercase">
             WHEN I AM NOT CODING I AM EXPLORING MY OTHER PASSIONS, SUCH AS
-            DIGITAL DESIGN & ARTIFICAL INTELLIGENCE.
+            DIGITAL DESIGN & MACHINE LEARNING.
           </p>
           <div className="mt-5 w-full max-w-screen-lg h-auto flex flex-row items-center justify-start">
             <div className="w-11/12 grid grid-cols-2 gap-y-4 gap-x-2">
