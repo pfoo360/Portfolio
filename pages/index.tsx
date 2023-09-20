@@ -18,7 +18,7 @@ import {
   IoMailSharp,
   IoCodeSlashSharp,
 } from "react-icons/io5";
-import bg from "@/public/europeana.jpg";
+import bg from "@/public/eberhard.jpg";
 
 //TODO: resume dl btn in about me section and contact section
 
@@ -181,12 +181,7 @@ export default function Home() {
               <ContactForm />
             </div>
             <div className="hidden lg:inline-block absolute w-full max-w-[63rem] h-full max-h-[47.25rem] bottom-screen z-[-999]">
-              <Image
-                src={`${bg.src}`}
-                alt="flower_bg"
-                fill
-                className="opacity-90"
-              />
+              <Image src={`${bg.src}`} alt="bg" fill className="opacity-90" />
               <div className="absolute -top-1 z-10 bg-gradient-to-b from-primary-black to-transparent h-[10vh] w-full" />
               <div className="absolute bottom-0 z-10 bg-gradient-to-t from-primary-black to-transparent h-[15vh] w-full" />
               <div className="absolute z-10 -right-1 bg-gradient-to-l from-primary-black to-transparent h-full w-6/12" />
