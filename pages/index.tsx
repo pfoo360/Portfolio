@@ -168,7 +168,11 @@ export default function Home() {
             CONTACT
           </h1>
           <div className="mb-10 w-full flex flex-col gap-4 sm:flex-row">
-            <GitHubLink link="https://github.com/pfoo360" text="GITHUB" />
+            <GitHubLink
+              link="https://github.com/pfoo360"
+              text="GITHUB"
+              className="md:max-w-[8rem]"
+            />
             <MiscLink
               link="https://www.linkedin.com/in/phillip-foo-61a836227/"
               text="LINKEDIN"
