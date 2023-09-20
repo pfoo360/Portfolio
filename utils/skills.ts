@@ -30,6 +30,9 @@ import tailwind from "@/public/skills/tailwindcss.svg";
 import trpc from "@/public/skills/trpc.svg";
 import typescript from "@/public/skills/typescript.svg";
 import vercel from "@/public/skills/vercel.svg";
+import docker from "@/public/skills/docker.svg";
+import kubernetes from "@/public/skills/kubernetes.svg";
+import redis from "@/public/skills/redis.svg";
 
 const skills = [
   {
@@ -73,12 +76,12 @@ const skills = [
     info: "PostgreSQL",
   },
   {
-    image: firebase,
-    info: "Firebase",
+    image: docker,
+    info: "Docker",
   },
   {
-    image: jwt,
-    info: "JWT",
+    image: firebase,
+    info: "Firebase",
   },
 ];
 
