@@ -80,8 +80,8 @@ const skills = [
     info: "Docker",
   },
   {
-    image: firebase,
-    info: "Firebase",
+    image: gopher,
+    info: "Go",
   },
 ];
 
@@ -116,9 +116,9 @@ export default skills;
 //   image: cPlusPlus,
 //   info: "C++",
 // },
-//  {
-//   image: gopher,
-//   info: "Gopher",
+// {
+//   image: firebase,
+//   info: "Firebase",
 // },
 //  {
 //   image: java,
