@@ -2,7 +2,10 @@ import Blobs from "@/components/Blobs/Blobs";
 
 const SplashScreen = () => {
   return (
-    <div className="w-full min-h-screen flex flex-row justify-center items-start">
+    <div
+      id="home"
+      className="w-full min-h-screen flex flex-row justify-center items-start"
+    >
       <div className="flex flex-col justify-center items-start h-full px-5 py-40 w-11/12 max-w-screen-xl">
         <h1 className="font-roboto text-secondary-black text-[8rem] leading-none tracking-tight font-bold break-word text-justify uppercase">
           HI,
