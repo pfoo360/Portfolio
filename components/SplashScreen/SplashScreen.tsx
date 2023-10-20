@@ -1,4 +1,3 @@
-import Blobs from "@/components/Blobs/Blobs";
 import StarsCanvas from "@/components/Stars/Stars";
 
 const SplashScreen = () => {
