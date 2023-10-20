@@ -11,13 +11,10 @@ const SplashScreen = () => {
         <h1 className="font-roboto text-primary-purple text-[8.5rem] leading-none tracking-tight font-bold break-all text-justify uppercase sm:hidden">
           PHIL
         </h1>
-        <h1 className="font-roboto text-primary-purple text-[7.5rem] leading-none tracking-tight font-bold break-all text-justify uppercase sm:hidden">
-          FOO
-        </h1>
         <h1 className="font-roboto text-primary-purple text-[9.5rem] leading-none tracking-tight font-bold break-all text-justify uppercase hidden sm:block">
           PHILLIP
         </h1>
-        <h1 className="font-roboto text-primary-purple text-[11rem] leading-none tracking-tight font-bold break-all text-justify uppercase hidden sm:block">
+        <h1 className="font-roboto text-primary-purple text-[7.5rem] leading-none tracking-tight font-bold break-all text-justify uppercase sm:text-[11rem]">
           FOO
         </h1>
         <h3 className="font-playfair text-white opacity-50 text-[1rem] leading-[1.5rem] tracking-[.1rem]">
