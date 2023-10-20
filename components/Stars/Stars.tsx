@@ -3,9 +3,10 @@ import { Canvas, useFrame, ThreeElements } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as THREE from "three";
 
-const Stars = (props: ThreeElements["mesh"]) => {
+const Stars = (props: ThreeElements["points"]) => {
   const NUM_STARS = 512;
-  const ref = useRef(null!);
+  const ref = useRef<THREE.Points>(null!);
+
   const [sphere] = useState(() => {
     const len = NUM_STARS * 3;
     const buf = new Float32Array(len);
