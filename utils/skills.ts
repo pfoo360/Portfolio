@@ -44,6 +44,22 @@ const skills = [
     info: "TypeScript",
   },
   {
+    image: python,
+    info: "Python",
+  },
+  {
+    image: gopher,
+    info: "Go",
+  },
+  {
+    image: postgresql,
+    info: "PostgreSQL",
+  },
+  {
+    image: docker,
+    info: "Docker",
+  },
+  {
     image: tailwind,
     info: "Tailwind CSS",
   },
@@ -55,10 +71,7 @@ const skills = [
     image: nodejs,
     info: "NodeJS",
   },
-  {
-    image: python,
-    info: "Python",
-  },
+
   {
     image: graphql,
     info: "GraphQL",
@@ -70,18 +83,6 @@ const skills = [
   {
     image: trpc,
     info: "tRPC",
-  },
-  {
-    image: postgresql,
-    info: "PostgreSQL",
-  },
-  {
-    image: docker,
-    info: "Docker",
-  },
-  {
-    image: gopher,
-    info: "Go",
   },
 ];
 
