@@ -3,8 +3,6 @@ import GitHubLink from "@/components/GitHubLink/GitHubLink";
 import MiscLink from "@/components/MiscLink/MiscLink";
 import Stalactites from "@/components/Stalactites/Stalactites";
 import { AiFillLinkedin } from "react-icons/ai";
-import Image from "next/image";
-import bg from "@/public/eberhard.jpg";
 
 const Contact = () => {
   return (
