@@ -12,7 +12,7 @@ module.exports = {
     extend: {
       animation: { blob: "blob 7s infinite" },
       colors: {
-        "primary-black": "#120f0f",
+        "primary-black": "#19181d",
         "secondary-black": "#2d2c2c",
         "primary-purple": "#b4acc1",
         "secondary-purple": "#878291",
