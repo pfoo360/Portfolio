@@ -26,6 +26,7 @@ import reactRouter from "@/public/skills/react-router.svg";
 import reactjs from "@/public/skills/react.svg";
 import redux from "@/public/skills/redux.svg";
 import rust from "@/public/skills/rust.svg";
+import sass from "@/public/skills/sass.svg";
 import tailwind from "@/public/skills/tailwindcss.svg";
 import trpc from "@/public/skills/trpc.svg";
 import typescript from "@/public/skills/typescript.svg";
@@ -64,6 +65,10 @@ const skills = [
     info: "Tailwind CSS",
   },
   {
+    image: sass,
+    info: "Sass",
+  },
+  {
     image: nextjs,
     info: "NextJS",
   },
@@ -75,10 +80,6 @@ const skills = [
   {
     image: graphql,
     info: "GraphQL",
-  },
-  {
-    image: apolloStack,
-    info: "Apollo stack",
   },
   {
     image: trpc,
