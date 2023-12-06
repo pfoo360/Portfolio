@@ -1,33 +1,20 @@
 import apolloStack from "@/public/skills/apollostack.svg";
-import axios from "@/public/skills/axios.svg";
-import cPlusPlus from "@/public/skills/c-plusplus.svg";
 import createReactApp from "@/public/skills/createReactApp.svg";
 import css from "@/public/skills/css-3.svg";
 import express from "@/public/skills/express.svg";
 import firebase from "@/public/skills/firebase.svg";
-import git from "@/public/skills/git.svg";
-import github from "@/public/skills/github.svg";
-import gopher from "@/public/skills/gopher.svg";
 import graphql from "@/public/skills/graphql.svg";
-import html from "@/public/skills/html-5.svg";
-import java from "@/public/skills/java.svg";
 import javascript from "@/public/skills/javascript.svg";
 import jwt from "@/public/skills/jwt.svg";
-import mongodb from "@/public/skills/mongodb.svg";
 import mysql from "@/public/skills/mysql.svg";
-import neo4j from "@/public/skills/neo4j.svg";
 import nextjs from "@/public/skills/nextjs.svg";
 import nodejs from "@/public/skills/nodejs.svg";
 import postgresql from "@/public/skills/postgresql.svg";
 import prisma from "@/public/skills/prisma.svg";
-import python from "@/public/skills/python.svg";
 import reactQuery from "@/public/skills/react-query.svg";
 import reactRouter from "@/public/skills/react-router.svg";
 import reactjs from "@/public/skills/react.svg";
-import redux from "@/public/skills/redux.svg";
-import rust from "@/public/skills/rust.svg";
 import tailwind from "@/public/skills/tailwindcss.svg";
-import trpc from "@/public/skills/trpc.svg";
 import typescript from "@/public/skills/typescript.svg";
 import vercel from "@/public/skills/vercel.svg";
 import { objectFit } from "@/types/types";
@@ -53,15 +40,81 @@ import nepenthes19 from "@/public/nepenthes/19.png";
 import nepenthes22 from "@/public/nepenthes/22.png";
 import nepenthes29 from "@/public/nepenthes/29.png";
 import nepenthes30 from "@/public/nepenthes/30.png";
-import chirp3 from "@/public/chirp/3.png";
-import chirp10 from "@/public/chirp/10.png";
-import chirp13 from "@/public/chirp/13.png";
-import chirp14 from "@/public/chirp/14.png";
-import chirp17 from "@/public/chirp/17.png";
-import chirp19 from "@/public/chirp/19.png";
-import chirp21 from "@/public/chirp/21.png";
+import freelance1 from "@/public/websites/1.png";
+import freelance2 from "@/public/websites/2.png";
+import freelance3 from "@/public/websites/3.png";
+import freelance4 from "@/public/websites/4.png";
+import freelance5 from "@/public/websites/5.png";
+import freelance6 from "@/public/websites/6.png";
+import freelance7 from "@/public/websites/7.png";
+import freelance8 from "@/public/websites/8.png";
+import freelance9 from "@/public/websites/9.png";
+import freelance10 from "@/public/websites/10.png";
 
 const works = [
+  {
+    name: "Freelance work",
+    image: {
+      src: freelance1.src,
+      objectFit: "contain" as objectFit,
+    },
+    description:
+      "Some websites I have created for clients as a freelance web developer/designer. Layout is sometimes provided by the client and other times I am given creative control. You can check out some of my work below: </br> - <a href='https://sweeterthansweet.vercel.app/' target='_blank'>sample 1</a> </br> - <a href='https://christinelin.vercel.app/' target='_blank'>sample 2</a></br> - <a href='https://jackjiang.vercel.app/' target='_blank'>sample 3</a> ",
+    technologies: [],
+    slides: [
+      {
+        src: freelance1.src,
+        alt: "adding_user_to_workspace",
+        objectFit: "contain" as objectFit,
+      },
+      {
+        src: freelance2.src,
+        alt: "create_project",
+        objectFit: "contain" as objectFit,
+      },
+      {
+        src: freelance3.src,
+        alt: "create_ticket",
+        objectFit: "contain" as objectFit,
+      },
+      {
+        src: freelance4.src,
+        alt: "project_view",
+        objectFit: "contain" as objectFit,
+      },
+      {
+        src: freelance5.src,
+        alt: "add_comment",
+        objectFit: "contain" as objectFit,
+      },
+      {
+        src: freelance6.src,
+        alt: "my_tickets_view",
+        objectFit: "contain" as objectFit,
+      },
+      {
+        src: freelance7.src,
+        alt: "tickets_visualized",
+        objectFit: "contain" as objectFit,
+      },
+      {
+        src: freelance8.src,
+        alt: "tickets_visualized",
+        objectFit: "contain" as objectFit,
+      },
+      {
+        src: freelance9.src,
+        alt: "tickets_visualized",
+        objectFit: "contain" as objectFit,
+      },
+      {
+        src: freelance10.src,
+        alt: "tickets_visualized",
+        objectFit: "contain" as objectFit,
+      },
+    ],
+    links: {},
+  },
   {
     name: "Nepenthes",
     image: {
@@ -187,66 +240,6 @@ const works = [
     links: {
       github: "https://github.com/pfoo360/Filebase",
       demo: "http://filebase-azure.vercel.app/",
-    },
-  },
-  {
-    name: "Chirp",
-    image: {
-      src: chirp13.src,
-      objectFit: "contain" as objectFit,
-    },
-    description:
-      "Chirp is a rudimentary Twitter clone. People are able to view user's 'chirps.' Registered users can perform CRUD operations on their own 'chirps.' This app was primarily an excuse to try out tRPC and Zod, two packages growing in popularity for their ability to build typesafe client-server apis. A session-based system is used to restrict/grant user permissions.</br> Chirp is built with Typescript and NextJS and hosted on Vercel. The frontend is built with ReactJS and TailwindCSS. The backend is built with tRPC and Zod for their typesafety. Prisma's CLI and ORM are used to develop and query a postgreSQL database hosted on Railway.",
-    technologies: [
-      { image: nextjs },
-      { image: typescript },
-      { image: vercel },
-      { image: reactjs },
-      { image: tailwind },
-      { image: trpc },
-      { image: prisma },
-      { image: postgresql },
-    ],
-    slides: [
-      {
-        src: chirp3.src,
-        alt: "sign_in_page",
-        objectFit: "contain" as objectFit,
-      },
-      {
-        src: chirp10.src,
-        alt: "user_profile",
-        objectFit: "contain" as objectFit,
-      },
-      {
-        src: chirp13.src,
-        alt: "create_chirp",
-        objectFit: "contain" as objectFit,
-      },
-      {
-        src: chirp14.src,
-        alt: "delete_update_buttons",
-        objectFit: "contain" as objectFit,
-      },
-      {
-        src: chirp17.src,
-        alt: "edit_chirp",
-        objectFit: "contain" as objectFit,
-      },
-      {
-        src: chirp19.src,
-        alt: "viewing_another_users_page",
-        objectFit: "contain" as objectFit,
-      },
-      {
-        src: chirp21.src,
-        alt: "user_does_not_exist_view",
-        objectFit: "contain" as objectFit,
-      },
-    ],
-    links: {
-      github: "https://github.com/pfoo360/Chirp",
-      demo: "https://chirp-seven.vercel.app/",
     },
   },
   {

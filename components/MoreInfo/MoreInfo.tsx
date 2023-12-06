@@ -22,7 +22,7 @@ interface MoreInfoProps {
       alt: string;
       objectFit: objectFit;
     }>;
-    links: { github: string; demo?: string };
+    links: { github?: string; demo?: string };
   };
 }
 
@@ -73,25 +73,31 @@ const MoreInfo: FC<MoreInfoProps> = ({ value }) => {
               />
             </div>
             <div dangerouslySetInnerHTML={{ __html: value.description }} />
-            <p className="text-primary-black font-playfair font-normal text-[1rem] leading-[1.5rem] my-[.25rem] text-justify opacity-50">
-              Visit the GitHub link below for more information, images and a
-              detailed walkthrough!
-            </p>
-            <h1 className="text-[1rem] leading-none text-primary-purple font-roboto font-bold mt-3 mb-2">
-              Technologies
-            </h1>
-            <div className="w-full flex flex-row h-auto flex-wrap gap-x-2 gap-y-2">
-              {value.technologies.map((technology, index) => (
-                <Svg
-                  key={index}
-                  image={technology.image}
-                  className="fill-current w-8 h-8"
-                />
-              ))}
-            </div>
+            {value.links.github && (
+              <p className="text-primary-black font-playfair font-normal text-[1rem] leading-[1.5rem] my-[.25rem] text-justify opacity-50">
+                Visit the GitHub link below for more information, images and a
+                detailed walkthrough!
+              </p>
+            )}
+            {value.technologies.length ? (
+              <>
+                <h1 className="text-[1rem] leading-none text-primary-purple font-roboto font-bold mt-3 mb-2">
+                  Technologies
+                </h1>
+                <div className="w-full flex flex-row h-auto flex-wrap gap-x-2 gap-y-2">
+                  {value.technologies.map((technology, index) => (
+                    <Svg
+                      key={index}
+                      image={technology.image}
+                      className="fill-current w-8 h-8"
+                    />
+                  ))}
+                </div>
+              </>
+            ) : null}
             <div className="h-[.125rem] bg-primary-black opacity-30 mt-4 mb-5"></div>
             <div className="flex flex-row flex-wrap gap-2 justify-between items-center w-full mt-1 mb-5">
-              {value.links.demo ? (
+              {value.links.demo && (
                 <MiscLink
                   icon={
                     <HiOutlineDesktopComputer className="w-[1.5rem] h-[1.5rem]" />
@@ -99,8 +105,10 @@ const MoreInfo: FC<MoreInfoProps> = ({ value }) => {
                   link={value.links.demo}
                   text="VIEW SITE"
                 />
-              ) : null}
-              <GitHubLink link={value.links.github} text="VIEW SOURCE CODE" />
+              )}
+              {value.links.github && (
+                <GitHubLink link={value.links.github} text="VIEW SOURCE CODE" />
+              )}
             </div>
           </div>
         </>
