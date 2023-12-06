@@ -29,7 +29,7 @@ const Stars = (props: ThreeElements["points"]) => {
         <PointMaterial
           transparent
           color="#f39dd6"
-          size={0.3}
+          size={0.15}
           sizeAttenuation={true}
           depthWrite={false}
         />
