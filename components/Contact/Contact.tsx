@@ -22,7 +22,7 @@ const Contact = () => {
             className="md:max-w-[8rem]"
           />
           <MiscLink
-            link="https://www.linkedin.com/in/phillip-foo-61a836227/"
+            link="https://www.linkedin.com/in/phillipfoo"
             text="LINKEDIN"
             icon={<AiFillLinkedin className="w-[1.5rem] h-[1.5rem]" />}
           />
