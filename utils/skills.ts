@@ -45,6 +45,10 @@ const skills = [
     info: "TypeScript",
   },
   {
+    image: cPlusPlus,
+    info: "C++",
+  },
+  {
     image: python,
     info: "Python",
   },
@@ -61,12 +65,12 @@ const skills = [
     info: "Docker",
   },
   {
-    image: tailwind,
-    info: "Tailwind CSS",
-  },
-  {
     image: sass,
     info: "Sass",
+  },
+  {
+    image: tailwind,
+    info: "Tailwind CSS",
   },
   {
     image: nextjs,
@@ -76,14 +80,9 @@ const skills = [
     image: nodejs,
     info: "NodeJS",
   },
-
   {
     image: graphql,
     info: "GraphQL",
-  },
-  {
-    image: trpc,
-    info: "tRPC",
   },
 ];
 
