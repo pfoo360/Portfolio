@@ -74,11 +74,11 @@ const skills = [
   },
   {
     image: nextjs,
-    info: "NextJS",
+    info: "Next",
   },
   {
     image: nodejs,
-    info: "NodeJS",
+    info: "Node",
   },
   {
     image: graphql,
