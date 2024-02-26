@@ -53,8 +53,8 @@ const skills = [
     info: "Python",
   },
   {
-    image: gopher,
-    info: "Go",
+    image: java,
+    info: "Java",
   },
   {
     image: postgresql,
